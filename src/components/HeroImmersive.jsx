@@ -44,6 +44,10 @@ export default function HeroImmersive({
                     className="absolute inset-0 bg-linear-to-t
       from-black/70 via-black/40 to-transparent"
                   />
+                  <div
+                    className="absolute inset-0 bg-linear-to-b
+      from-black/60 via-black/30 to-transparent"
+                  />
 
                   {/* Left vignette for extra readability */}
                   <div
@@ -58,7 +62,7 @@ export default function HeroImmersive({
       </div>
 
       {/* Overlay content (fixed left column, responsive) */}
-      <div className="absolute inset-x-4 md:inset-x-12 top-8 md:top-16 z-50 pointer-events-none">
+      <div className="absolute inset-x-4 md:inset-x-21 top-8 md:top-16 z-40 pointer-events-none">
         <div className="max-w-xl pointer-events-auto text-white">
           <div className="inline-block glass px-3 py-1 rounded-full text-xs mb-4">
             Most affordable JDA Approved properties in Jaipur
@@ -77,7 +81,8 @@ export default function HeroImmersive({
             {pills.map((p) => (
               <button
                 key={p}
-                className="px-4 py-1 rounded-full bg-primary text-white text-sm shadow-sm"
+              
+                className="px-4 py-1 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-sm text-white"
               >
                 {p}
               </button>
@@ -87,13 +92,13 @@ export default function HeroImmersive({
           <div className="mt-6 flex gap-3">
             <a
               href="#contact"
-              className="inline-block px-5 py-3 rounded bg-primary text-white font-medium"
+              className="px-6 py-2 rounded-full border border-[#e41e25] text-[#e41e25] hover:bg-[#e41e25] hover:text-white transition"
             >
               Request Callback
             </a>
             <a
               href="/properties"
-              className="inline-block px-5 py-3 rounded border border-white/20 text-white"
+              className="px-6 py-2 rounded-full border border-[#e41e25] text-[#e41e25] hover:bg-[#e41e25] hover:text-white transition"
             >
               View Listings
             </a>

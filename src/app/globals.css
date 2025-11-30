@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary:#C81E1E;
+  --primary:#E41E25;
   --secondary:#BE1D2E;
   --charcoal:#403F3F;
   --lightgray:#D8D8D8;
@@ -81,4 +82,33 @@ body {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+.header-shadow {
+  box-shadow: 0 6px 20px rgba(2,6,23,0.15);
+}
+
+/* ============================
+   SWIPER BUTTONS ONLY FOR CARDS
+   ============================ */
+
+.card-swiper .swiper-button-next,
+.card-swiper .swiper-button-prev {
+  width: 30px !important;
+  height: 30px !important;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20%;
+  color: #e41e25 !important; /* brand red */
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.2); */
+}
+
+.card-swiper .swiper-button-next::after,
+.card-swiper .swiper-button-prev::after {
+  font-size: 90px !important; /* arrow icon size */
+}
+
+/* Hover effect */
+.card-swiper .swiper-button-next:hover,
+.card-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 1);
 }

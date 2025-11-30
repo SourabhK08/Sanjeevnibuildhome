@@ -9,7 +9,8 @@
     "bedrooms": 3,
     "bathrooms": 3,
     "description": "A spacious villa with garden and parking.",
-    "images": ["/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-4.png","/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-2.png"]
+    "images": ["/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-4.png","/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-2.png"],
+    "badges": ["FOR SELL"]
   },
   {
     "id": "2",
@@ -21,7 +22,8 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "Cozy 2BHK close to the park and metro.",
-    "images": ["/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-3.png"]
+    "images": ["/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-3.png"],
+    "badges": ["FOR SELL"]
   },
   {
     "id": "3",
@@ -33,7 +35,7 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "Cozy 2BHK close to the park and metro.",
-    "images": ["/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-1.png"]
+    "images": ["/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-1.png","/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-2.png"]
   },
   {
     "id": "4",

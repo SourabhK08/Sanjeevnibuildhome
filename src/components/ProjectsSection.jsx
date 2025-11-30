@@ -94,9 +94,6 @@ export default function ProjectsSection({ items = [], pageSize = 3 }) {
         <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white">
           Our Top Listed Ongoing Projects
         </h2>
-        <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">
-          Based on your view history
-        </p>
       </div>
 
       {/* Container with horizontal pages */}
@@ -134,8 +131,8 @@ export default function ProjectsSection({ items = [], pageSize = 3 }) {
               onClick={() => setPage(i)}
               className={`relative w-3 h-3 rounded-full transition-all duration-200 ${
                 isActive
-                  ? "bg-primary w-8 h-3 rounded-full"
-                  : "bg-gray-300 dark:bg-gray-700"
+                  ? "bg-[#e41e25] w-8 h-3 rounded-full"
+                  : "bg-[#4c242566] dark:bg-gray-700"
               }`}
             />
           );

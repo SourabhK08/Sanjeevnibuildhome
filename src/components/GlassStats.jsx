@@ -4,7 +4,10 @@ import Counter from "./Counter";
 export default function GlassStats({ stats = [] }) {
   return (
     <div className="max-w-6xl mx-auto px-4 relative mt-8">
-      <div className=" bg-[#e51e2517] rounded-3xl p-4 flex justify-between items-center shadow-xl">
+      <div
+        className=" bg-[#e51e2517] rounded-3xl p-4 flex justify-between items-center shadow-[0_0_40px_-10px_rgba(227,30,36,0.4)]
+"
+      >
         {stats.map((s) => (
           <div key={s.label} className="text-center px-4">
             <div className="text-2xl md:text-3xl font-bold text-black dark:text-white">
@@ -17,7 +20,9 @@ export default function GlassStats({ stats = [] }) {
                 className="inline-block"
               />
             </div>
-            <div className="text-sm text-gray-900 dark:text-gray-200">{s.label}</div>
+            <div className="text-sm text-gray-900 dark:text-gray-200">
+              {s.label}
+            </div>
           </div>
         ))}
       </div>

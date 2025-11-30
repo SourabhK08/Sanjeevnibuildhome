@@ -17,7 +17,7 @@ export default function Home() {
     "Sirsi Road",
     "Tonk Road",
     "Diggi Road",
-    "Jagatpura",
+   
   ];
 
   const stats = [
