@@ -32,7 +32,23 @@ body {
 }
 
 
+:is(.swiper-button-prev, .swiper-button-next) svg {
+    object-fit: contain;
+    transform-origin: center;
+    fill: currentColor;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
 
+.swiper-horizontal .swiper-button-prev, .swiper-horizontal .swiper-button-next, .swiper-horizontal ~ .swiper-button-prev, .swiper-horizontal ~ .swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 50%);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    color: #e41e25;
+    background-color: #808080ba;
+    margin-left: 0;
+    padding: 8px;
+}
 
 
 

@@ -1,7 +1,8 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // <-- add this
+import Navbar from "@/components/Navbar"; 
 
 import { Geist, Geist_Mono } from "next/font/google";
+import ThemeProvider from "./ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,14 +23,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased bg-white text-gray-900">
-        <Navbar /> {/* ✔ Works perfectly, layout stays server */}
-        <main>{children}</main>
-        <footer className="mt-12">
-          <div className="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600">
-            © {new Date().getFullYear()} Sanjeevni BuildHome. All rights
-            reserved.
-          </div>
-        </footer>
+        <ThemeProvider>
+          <Navbar /> {/* ✔ Works perfectly, layout stays server */}
+          <main>{children}</main>
+          <footer className="mt-12">
+            <div className="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600">
+              © {new Date().getFullYear()} Sanjeevni BuildHome. All rights
+              reserved.
+            </div>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

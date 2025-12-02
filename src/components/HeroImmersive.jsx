@@ -29,7 +29,7 @@ export default function HeroImmersive({
         >
           {images.map((src, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative w-full h-[65vh] md:h-[75vh] lg:h-[80vh]">
+              <div className="relative w-full h-[65vh] md:h-[75vh] lg:h-[90vh]">
                 <Image
                   src={src}
                   alt={`slide-${idx}`}
@@ -63,7 +63,7 @@ export default function HeroImmersive({
 
       {/* Overlay content (fixed left column, responsive) */}
       <div className="absolute inset-x-4 md:inset-x-21 top-8 md:top-16 z-40 pointer-events-none">
-        <div className="max-w-xl pointer-events-auto text-white">
+        <div className="max-w-2xl pointer-events-auto text-white">
           <div className="inline-block glass px-3 py-1 rounded-full text-xs mb-4">
             Most affordable JDA Approved properties in Jaipur
           </div>
@@ -81,7 +81,6 @@ export default function HeroImmersive({
             {pills.map((p) => (
               <button
                 key={p}
-              
                 className="px-4 py-1 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-sm text-white"
               >
                 {p}

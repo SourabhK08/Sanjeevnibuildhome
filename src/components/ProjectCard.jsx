@@ -58,10 +58,13 @@ export default function ProjectCard({ p }) {
           {(p.badges || []).slice(0, 2).map((b, i) => {
             const lb = (b || "").toLowerCase();
             const cls = lb.includes("featured")
-              ? "bg-primary text-white"
-              : lb.includes("sell") || lb.includes("for sell")
               ? "bg-[#e51e25] text-white"
-              : "bg-white/90 text-charcoal";
+              : lb.includes("sell") ||
+                lb.includes("for sell") ||
+                lb.includes("for sale") ||
+                lb.includes("sold out")
+              ? "bg-[#e51e25] text-white"
+              : "bg-white/90 dark:bg-[#808080ba] dark:text-white text-charcoal";
 
             return (
               <span
@@ -77,8 +80,12 @@ export default function ProjectCard({ p }) {
 
       {/* CARD BODY */}
       <div className="p-4">
-        <div className="text-base font-semibold text-[#e41e25]
-">{priceText}</div>
+        <div
+          className="text-base font-semibold text-[#e41e25]
+"
+        >
+          {priceText}
+        </div>
 
         <h3
           id={`project-${p.id}-title`}
