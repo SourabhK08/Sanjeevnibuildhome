@@ -1,50 +1,6 @@
-@import "tailwindcss";
-
-
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary:#E41E25;
-  --secondary:#BE1D2E;
-  --charcoal:#403F3F;
-  --lightgray:#D8D8D8;
-  --brandBlack:#080808;
-}
-
-html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
-/* DON'T override body color/background here — let Tailwind utilities handle it.
-   We keep a simple fallback font declaration only. */
-
-:root { --fallback-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-
-  font-family: var(--font-geist-sans, var(--fallback-font));
-}
-
-
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :is(.swiper-button-prev, .swiper-button-next) svg {
     object-fit: contain;
@@ -62,6 +18,8 @@ body {
     background-color: #808080ba;
     margin-left: 0;
     padding: 8px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
 }
 
 
@@ -126,7 +84,7 @@ body {
 .card-swiper .swiper-button-prev {
   width: 30px !important;
   height: 30px !important;
-  background: rgba(255, 255, 255, 0.8);
+  background: #808080ba;
   border-radius: 20%;
   color: #e41e25 !important; /* brand red */
   /* box-shadow: 0 2px 6px rgba(0,0,0,0.2); */
@@ -137,8 +95,10 @@ body {
   font-size: 90px !important; /* arrow icon size */
 }
 
-/* Hover effect */
-.card-swiper .swiper-button-next:hover,
-.card-swiper .swiper-button-prev:hover {
+
+.swiper-button-next:hover{
+  background: rgba(255, 255, 255, 1);
+}
+.swiper-button-prev:hover{
   background: rgba(255, 255, 255, 1);
 }

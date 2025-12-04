@@ -5,7 +5,8 @@ export default function GlassStats({ stats = [] }) {
   return (
     <div className="max-w-6xl mx-auto px-4 relative mt-8">
       <div
-        className=" bg-[#e51e2517] rounded-3xl p-4 flex justify-between items-center shadow-[0_0_40px_-10px_rgba(227,30,36,0.4)]
+        // className=" bg-[#e51e2517] rounded-3xl p-4 flex justify-between items-center shadow-[0_0_40px_-10px_rgba(227,30,36,0.4)]
+        className=" bg-[#e51e2517] rounded-xl p-4 flex justify-between items-center shadow-[0_0_10px_-10px_rgba(227,30,36,0.3)]
 "
       >
         {stats.map((s) => (

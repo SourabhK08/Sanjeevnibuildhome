@@ -29,7 +29,7 @@ export default function HeroImmersive({
         >
           {images.map((src, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative w-full h-[65vh] md:h-[75vh] lg:h-[90vh]">
+              <div className="relative w-full h-[65vh] md:h-[75vh] lg:h-[93vh]">
                 <Image
                   src={src}
                   alt={`slide-${idx}`}
@@ -41,18 +41,18 @@ export default function HeroImmersive({
                 {/* linear overlay for contrast */}
                 <div className="absolute inset-0 pointer-events-none">
                   <div
-                    className="absolute inset-0 bg-linear-to-t
+                    className="absolute inset-0 bg-gradient-to-t
       from-black/70 via-black/40 to-transparent"
                   />
                   <div
-                    className="absolute inset-0 bg-linear-to-b
+                    className="absolute inset-0 bg-gradient-to-b
       from-black/60 via-black/30 to-transparent"
                   />
 
                   {/* Left vignette for extra readability */}
                   <div
                     className="absolute left-0 top-0 bottom-0 w-1/3 
-      bg-linear-to-r from-black/50 via-black/20 to-transparent"
+      bg-gradient-to-r from-black/50 via-black/20 to-transparent"
                   />
                 </div>
               </div>
@@ -62,8 +62,8 @@ export default function HeroImmersive({
       </div>
 
       {/* Overlay content (fixed left column, responsive) */}
-      <div className="absolute inset-x-4 md:inset-x-21 top-8 md:top-16 z-40 pointer-events-none">
-        <div className="max-w-2xl pointer-events-auto text-white">
+      <div className="absolute inset-x-4 md:inset-x-21 lg:inset-x-44 top-8 md:top-16 lg:top-72  z-40 pointer-events-none">
+        <div className="max-w-2xl pointer-events-auto text-white leading-10">
           <div className="inline-block glass px-3 py-1 rounded-full text-xs mb-4">
             Most affordable JDA Approved properties in Jaipur
           </div>

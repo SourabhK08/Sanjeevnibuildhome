@@ -1,19 +1,32 @@
 "use client";
+import { createContext, useState, useEffect, useContext } from "react";
 
-import { useEffect, useState } from "react";
+const ThemeContext = createContext();
 
-export default function ThemeProvider({ children }) {
-  const [mounted, setMounted] = useState(false);
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      document.documentElement.classList.add("dark");
+    if (saved) {
+      setTheme(saved);
+      document.documentElement.classList.toggle("dark", saved === "dark");
     }
-    setMounted(true);
   }, []);
 
-  if (!mounted) return null; // avoid hydration mismatch
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
-  return <>{children}</>;
+  const toggleTheme = () =>
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
+
+export const useTheme = () => useContext(ThemeContext);

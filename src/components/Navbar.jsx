@@ -2,48 +2,12 @@
 
 import { useState, useEffect } from "react";
 import NavbarClientWrapper from "./NavbarClientWrapper";
+import { useTheme } from "@/app/ThemeProvider";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
 
-  // Navbar.jsx
-
-  // Navbar.jsx
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-
-    // 1. Update the local state
-    setTheme(newTheme);
-
-    // 2. Update the DOM immediately and definitively
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      // CRITICAL: Ensure light is removed, just in case
-      document.documentElement.classList.remove("light");
-    } else {
-      document.documentElement.classList.remove("dark");
-      // CRITICAL: Ensure light is added if you rely on it elsewhere (though Tailwind uses absence of dark)
-      // document.documentElement.classList.add("light"); // Not usually needed for Tailwind
-    }
-
-    // 3. Update localStorage
-    localStorage.setItem("theme", newTheme);
-  };
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme") || "light";
-    setTheme(saved);
-
-    // CRITICAL: Ensure the initial DOM state matches the saved state
-    if (saved === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      // Ensure 'dark' is removed if the saved theme is light
-      document.documentElement.classList.remove("dark");
-    }
-  }, []); // The empty array ensures this only runs ONCE on mount
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onResize = () => {
@@ -82,7 +46,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-6">
             <NavbarClientWrapper />
             {/* Dark/Light Toggle */}
             <button
