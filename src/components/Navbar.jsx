@@ -7,27 +7,43 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("light");
 
+  // Navbar.jsx
+
+  // Navbar.jsx
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+
+    // 1. Update the local state
+    setTheme(newTheme);
+
+    // 2. Update the DOM immediately and definitively
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      // CRITICAL: Ensure light is removed, just in case
+      document.documentElement.classList.remove("light");
+    } else {
+      document.documentElement.classList.remove("dark");
+      // CRITICAL: Ensure light is added if you rely on it elsewhere (though Tailwind uses absence of dark)
+      // document.documentElement.classList.add("light"); // Not usually needed for Tailwind
+    }
+
+    // 3. Update localStorage
+    localStorage.setItem("theme", newTheme);
+  };
+
   useEffect(() => {
     const saved = localStorage.getItem("theme") || "light";
     setTheme(saved);
 
+    // CRITICAL: Ensure the initial DOM state matches the saved state
     if (saved === "dark") {
       document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
     } else {
+      // Ensure 'dark' is removed if the saved theme is light
       document.documentElement.classList.remove("dark");
     }
-
-    localStorage.setItem("theme", newTheme);
-  };
+  }, []); // The empty array ensures this only runs ONCE on mount
 
   useEffect(() => {
     const onResize = () => {
@@ -39,6 +55,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
+      {/* <div className="backdrop-blur-md bg-white/70 dark:bg-black/60 transition-shadow"> */}
       <div className="backdrop-blur-md bg-white/70 dark:bg-black/60 transition-shadow">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3">
@@ -59,7 +76,7 @@ export default function Navbar() {
             <a href="#media" className="hover:text-[#e41e25]">
               Our Gallery
             </a>
-            <a href="#contact" className="hover:text-[#e41e25]">
+            <a href="/contact-us" className="hover:text-[#e41e25]">
               Contact Us
             </a>
           </nav>

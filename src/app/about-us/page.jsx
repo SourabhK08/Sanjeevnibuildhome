@@ -43,7 +43,7 @@ export default function AboutUsPage() {
   });
 
   return (
-    <div className="bg-white overflow-hidden font-sans text-gray-800">
+    <div className="bg-white dark:bg-gray-900 overflow-hidden font-sans text-gray-800 dark:text-gray-100">
       {/* ================= SECTION 1: HERO BANNER ================= */}
       <div className="relative h-[60vh] flex items-center justify-center">
         {/* Replace '/images/hero-bg.jpg' with your actual high-end property image */}
@@ -75,7 +75,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* ================= SECTION 2: VISION & MISSION ================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-neutral-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -121,7 +121,7 @@ export default function AboutUsPage() {
                     Our Vision
                   </h2>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                   At Sanjeevni, our vision is to build more than just homes — we
                   aspire to create vibrant communities where families can grow,
                   dreams can flourish, and every moment finds meaning. We aim to
@@ -147,7 +147,7 @@ export default function AboutUsPage() {
                     Our Mission
                   </h2>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                   Our mission is to deliver thoughtfully designed, JDA-approved
                   projects that bring together comfort, security, and modern
                   amenities, while keeping affordability and long-term value at
@@ -181,7 +181,7 @@ export default function AboutUsPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our Journey in Numbers
             </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
+            <p className="text-gray-400 dark:text-gray-300 max-w-xl mx-auto">
               Every milestone is built on trust, commitment, and happy families.
             </p>
             <div
@@ -228,7 +228,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ================= SECTION 4: WHY SANJEEVNI ================= */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-white">
+      <section className="py-24 px-6 md:px-12 lg:px-24 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -241,7 +241,7 @@ export default function AboutUsPage() {
               Why{" "}
               <span style={{ color: brandColor }}>Sanjeevni Buildhome?</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto">
               We bring together years of expertise and transparent practices to
               deliver not just properties, but a lifestyle of comfort, security,
               and long-term value.
@@ -293,7 +293,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ================= SECTION 5: MEET THE DIRECTORS ================= */}
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-24 px-6 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -305,7 +305,7 @@ export default function AboutUsPage() {
             <h2 className="text-4xl font-bold">
               Meet The <span style={{ color: brandColor }}>Leadership</span>
             </h2>
-            <p className="text-gray-600 mt-4 text-lg">
+            <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg">
               The visionaries guiding Sanjeevni towards new horizons.
             </p>
             <div
@@ -363,11 +363,13 @@ function FeatureCard({ icon, title, desc }) {
   return (
     <motion.div
       variants={fadeInUp}
-      className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-shadow duration-300 text-center"
+      className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 text-center"
     >
       <div className="flex justify-center">{icon}</div>
       <h3 className="text-2xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{desc}</p>
+      <p className="text-gray-600  dark:text-gray-300 leading-relaxed">
+        {desc}
+      </p>
     </motion.div>
   );
 }
@@ -380,10 +382,10 @@ function DirectorCard({ imageSrc, name, bio, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: delay }}
-      className="flex flex-col lg:flex-row gap-8 items-start bg-white p-8 rounded-2xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)]"
+      className="flex flex-col lg:flex-row gap-8 items-start bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-[...] border border-gray-100 dark:border-gray-700"
     >
       <div
-        className="w-full lg:w-1/3 flex-shrink-0 relative h-[300px] lg:h-[350px] rounded-xl overflow-hidden border-b-4"
+        className="w-full lg:w-1/3 shrink-0 relative h-[300px] lg:h-[350px] rounded-xl overflow-hidden border-b-4"
         style={{ borderColor: brandColor }}
       >
         {/* Replace with actual director image */}
@@ -395,12 +397,15 @@ function DirectorCard({ imageSrc, name, bio, delay }) {
         />
       </div>
       <div className="lg:w-2/3">
-        <h3 className="text-2xl font-bold mb-2">{name}</h3>
+        <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+          {name}
+        </h3>
+
         <div
           className="h-1 w-12 mb-6"
           style={{ backgroundColor: brandColor }}
         ></div>
-        <p className="text-gray-600 leading-relaxed text-[15px] text-justify">
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-[15px] text-justify">
           {bio}
         </p>
         <div className="mt-6 flex text-gray-500">

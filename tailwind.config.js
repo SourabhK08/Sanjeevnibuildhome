@@ -1,7 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   darkMode: "class",
-  content: ["./src/**/*.{js,jsx,ts,tsx,mdx}"],
+  content: [
+    // 1. Files in the root 'app' directory (e.g., layout.js, page.js)
+    "./app/**/*.{js,jsx,ts,tsx,mdx}",
+    // 2. Files in the root 'components' directory
+    "./components/**/*.{js,jsx,ts,tsx,mdx}",
+    // 3. Files in the 'src' directory
+    "./src/**/*.{js,jsx,ts,tsx,mdx}",
+    // 4. Ensure root-level files are caught (optional, but safe)
+    "./*.{js,jsx,ts,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
