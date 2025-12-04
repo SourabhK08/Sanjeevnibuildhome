@@ -23,7 +23,7 @@ export default function ProjectCard({ p }) {
 
   return (
     <article
-      className="group bg-white dark:bg-slate-900/60 border border-gray-100 dark:border-gray-800 rounded-2xl overflow-hidden transition-transform transform hover:-translate-y-2"
+      className="group bg-white dark:bg-neutral-900 border border-gray-100 dark:border-gray-400 rounded-2xl overflow-hidden transition-transform transform hover:-translate-y-2"
       aria-labelledby={`project-${p.id}-title`}
     >
       {/* IMAGE CAROUSEL */}

@@ -43,7 +43,7 @@ export default function AboutUsPage() {
   });
 
   return (
-    <div className="bg-white dark:bg-gray-900 overflow-hidden font-sans text-gray-800 dark:text-gray-100">
+    <div className="bg-white dark:bg-neutral-900 overflow-hidden font-sans text-gray-800 dark:text-gray-100">
       {/* ================= SECTION 1: HERO BANNER ================= */}
       <div className="relative h-[60vh] flex items-center justify-center">
         {/* Replace '/images/hero-bg.jpg' with your actual high-end property image */}
@@ -75,7 +75,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* ================= SECTION 2: VISION & MISSION ================= */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-neutral-900">
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -165,7 +165,7 @@ export default function AboutUsPage() {
       {/* ================= SECTION 3: JOURNEY IN NUMBERS (Animated Stats) ================= */}
       {/* Using a dark background here for luxury contrast */}
       <section
-        className="py-24 bg-gray-900 text-white relative overflow-hidden"
+        className="py-24 bg-neutral-900 text-white relative overflow-hidden"
         ref={statsRef}
       >
         {/* Subtle background pattern overlaid */}
@@ -293,7 +293,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ================= SECTION 5: MEET THE DIRECTORS ================= */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-gray-900">
+      <section className="py-24 px-6 bg-gray-50 dark:bg-neutral-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -363,7 +363,7 @@ function FeatureCard({ icon, title, desc }) {
   return (
     <motion.div
       variants={fadeInUp}
-      className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 text-center"
+      className="bg-gray-50 dark:bg-neutral-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-400 hover:shadow-xl transition-shadow duration-300 text-center"
     >
       <div className="flex justify-center">{icon}</div>
       <h3 className="text-2xl font-bold mb-4">{title}</h3>
@@ -382,7 +382,7 @@ function DirectorCard({ imageSrc, name, bio, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: delay }}
-      className="flex flex-col lg:flex-row gap-8 items-start bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-[...] border border-gray-100 dark:border-gray-700"
+      className="flex flex-col lg:flex-row gap-8 items-start bg-white dark:bg-neutral-900 p-8 rounded-2xl shadow-[...] border border-gray-100 dark:border-gray-400"
     >
       <div
         className="w-full lg:w-1/3 shrink-0 relative h-[300px] lg:h-[350px] rounded-xl overflow-hidden border-b-4"

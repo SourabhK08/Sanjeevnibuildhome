@@ -37,7 +37,7 @@ export default function Navbar() {
             <a href="/properties" className="hover:text-[#e41e25]">
               Our Properties
             </a>
-            <a href="#media" className="hover:text-[#e41e25]">
+            <a href="/gallery" className="hover:text-[#e41e25]">
               Our Gallery
             </a>
             <a href="/contact-us" className="hover:text-[#e41e25]">

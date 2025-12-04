@@ -62,7 +62,7 @@ export default function HeroImmersive({
       </div>
 
       {/* Overlay content (fixed left column, responsive) */}
-      <div className="absolute inset-x-4 md:inset-x-21 lg:inset-x-44 top-8 md:top-16 lg:top-72  z-40 pointer-events-none">
+      <div className="absolute inset-x-4 md:inset-x-21 lg:inset-x-44 top-8 md:top-16 lg:top-32  z-40 pointer-events-none">
         <div className="max-w-2xl pointer-events-auto text-white leading-10">
           <div className="inline-block glass px-3 py-1 rounded-full text-xs mb-4">
             Most affordable JDA Approved properties in Jaipur
