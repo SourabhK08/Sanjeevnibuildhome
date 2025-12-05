@@ -319,8 +319,8 @@ export default function AboutUsPage() {
             <DirectorCard
               name="Mr. Sunil Maheshwari"
               // Replace with actual photo path
-              imageSrc="/images/director-sunil.jpg"
-              bio="Mr. Sunil Maheshwari is a Management Graduate & having 13 years of rich experience in Banking & Finance Industry. He has started his career as an Officer with IndusInd Bank & Grown up to the level of Senior Vice President with Yes Bank. After such a rich experience of Banking Sector he has decided to move in Real Estate Sector as an entrepreneur with a long term vision & Joined hands with Sanjeevni Group in order to take it forward together."
+              imageSrc="/directors/2.webp"
+              bio="Mr. Sunil Maheshwari is a Management Graduate & having 13 years of rich experience in Banking & Finance Industry. He has started his career as an Officer with IndusInd Bank & Grown up to the level of Senior Vice President with Yes Bank. After such a rich experience of Banking Sector he has decided to move in Real Estate Sector as an entrepreneur with a long term vision & Joined hands with Sanjeevn"
               delay={0.2}
             />
 
@@ -328,7 +328,7 @@ export default function AboutUsPage() {
             <DirectorCard
               name="Mr. Rajeev Tak"
               // Replace with actual photo path
-              imageSrc="/images/director-rajeev.jpg"
+              imageSrc="/directors/1.webp"
               bio="Mr. Rajiv Tak is a Management Graduate from Jaipur & having rich experience of 13 Years in FMCG, Telecommunication & Media & entertainment. He has started his career with Pidilite Industries as an Officer & moved up to the level of Area Sales Manager with Tata Sky Limited. With an intent of entrepreneurship he has Joined hands with Sanjeevni Group."
               delay={0.4}
             />
@@ -385,15 +385,15 @@ function DirectorCard({ imageSrc, name, bio, delay }) {
       className="flex flex-col lg:flex-row gap-8 items-start bg-white dark:bg-neutral-900 p-8 rounded-2xl shadow-[...] border border-gray-100 dark:border-gray-400"
     >
       <div
-        className="w-full lg:w-1/3 shrink-0 relative h-[300px] lg:h-[350px] rounded-xl overflow-hidden border-b-4"
+        className="w-full lg:w-1/3 shrink-0 relative h-[220px] sm:h-[260px] lg:h-[350px]
+             rounded-xl overflow-hidden "
         style={{ borderColor: brandColor }}
       >
-        {/* Replace with actual director image */}
         <Image
           src={imageSrc}
           alt={name}
           fill
-          className="object-cover hover:scale-105 transition-transform duration-500"
+          className="object-cover object-top hover:scale-105 transition-transform duration-500"
         />
       </div>
       <div className="lg:w-2/3">
