@@ -79,14 +79,14 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: "/projects/ganesh-vihar/compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-4.webp",
+    src: "/projects/ganesh-vihar/Compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-4.webp",
     category: "Events",
     title: "Holi Celebration at Enclave",
     date: "Mar 25, 2024",
   },
   {
     id: 5,
-    src: "/projects/ganesh-vihar/compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-2.webp",
+    src: "/projects/ganesh-vihar/Compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-2.webp",
     category: "Events",
     title: "Brokers Meet 2024",
     date: "Feb 01, 2024",
@@ -94,14 +94,14 @@ const galleryImages = [
   // Site Progress
   {
     id: 6,
-    src: "/projects/pearl-2/compressed/sanjeevni-buildhome-pearl-2-tonk-road-2.webp",
+    src: "/projects/pearl-2/Compressed/sanjeevni-buildhome-pearl-2-tonk-road-2.webp",
     category: "Site Progress",
     title: "Phase 2 Construction Update",
     date: "Current",
   },
   {
     id: 7,
-    src: "/projects/pearl-2/compressed/sanjeevni-buildhome-pearl-2-tonk-road-4.webp",
+    src: "/projects/pearl-2/Compressed/sanjeevni-buildhome-pearl-2-tonk-road-4.webp",
     category: "Site Progress",
     title: "Heights Finishing Touches",
     date: "Dec 2023",
@@ -110,7 +110,7 @@ const galleryImages = [
   // CSR
   {
     id: 8,
-    src: "/projects/pearl-2/compressed/sanjeevni-buildhome-pearl-2-tonk-road-1.webp",
+    src: "/projects/pearl-2/Compressed/sanjeevni-buildhome-pearl-2-tonk-road-1.webp",
     category: "CSR & Community",
     title: "Tree Plantation Drive",
     date: "Jul 05, 2023",

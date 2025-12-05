@@ -60,7 +60,7 @@ export default function ContactUsPage() {
         <div className="absolute inset-0 z-0">
           {/* Replace with a high-end reception or architectural image */}
           <Image
-            src="/projects/ganesh-vihar/compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-1.webp" // CHANGE THIS PATH
+            src="/projects/ganesh-vihar/Compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-1.webp" // CHANGE THIS PATH
             alt="Contact Sanjeevni Buildhome"
             fill
             className="object-cover brightness-[0.4]"

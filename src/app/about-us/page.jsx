@@ -49,7 +49,7 @@ export default function AboutUsPage() {
         {/* Replace '/images/hero-bg.jpg' with your actual high-end property image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/projects/ganesh-vihar/compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-1.webp" // CHANGE THIS PATH
+            src="/projects/ganesh-vihar/Compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-1.webp" // CHANGE THIS PATH
             alt="Sanjeevni Luxury Real Estate"
             fill
             className="object-cover brightness-[0.4]"
@@ -91,7 +91,7 @@ export default function AboutUsPage() {
             >
               {/* Replace '/images/vision-bg.jpg' with an image of happy families or modern architecture */}
               <Image
-                src="/projects/ganesh-vihar/compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-3.webp" // CHANGE THIS PATH
+                src="/projects/ganesh-vihar/Compressed/sanjeevni-buildhome-ganesh-vihar-tonk-road-3.webp" // CHANGE THIS PATH
                 alt="Our Vision"
                 fill
                 className="object-cover"
