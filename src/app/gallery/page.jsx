@@ -220,7 +220,7 @@ export default function GalleryPage() {
                 className={`px-6 py-2 rounded-full text-sm md:text-base font-medium transition-all duration-300 border-2 ${
                   activeCategory === category
                     ? `bg-[${brandColor}] text-white border-[${brandColor}] shadow-md`
-                    : "bg-white dark:bg-neutral-400 dark:text-white dark:border-gray-200  text-gray-600 border-gray-200 hover:border-[#e41e25] hover:text-[#e41e25] dark:hover:border-[#e41e25]"
+                    : "bg-white dark:bg-transparent dark:text-[#e41e25] dark:hover:border-white dark:hover:text-white text-gray-600 border-gray-200 hover:border-[#e41e25] hover:text-[#e41e25] dark:border-[#e41e25]"
                 }`}
                 // Inline style needed for dynamic brand color usage in Tailwind classes sometimes
                 style={

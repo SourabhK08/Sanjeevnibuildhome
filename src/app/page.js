@@ -7,7 +7,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   const heroImages = [
-    "/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-2.png",
+    "/hero-banner/1.png",
     "/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-3.png",
     "/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-4.png",
     "/projects/anant/sanjeevni-buildhome-anant-infinity-at-diggi-road-5.png",

@@ -39,22 +39,22 @@ export default function HeroImmersive({
                   priority={idx === 0}
                 />
                 {/* linear overlay for contrast */}
-                <div className="absolute inset-0 pointer-events-none">
-                  <div
+              <div className="absolute inset-0 pointer-events-none">
+                   <div
                     className="absolute inset-0 bg-gradient-to-t
       from-black/70 via-black/40 to-transparent"
-                  />
+                  />{/*
                   <div
                     className="absolute inset-0 bg-gradient-to-b
       from-black/60 via-black/30 to-transparent"
-                  />
+                  /> */}
 
-                  {/* Left vignette for extra readability */}
+                  
                   <div
                     className="absolute left-0 top-0 bottom-0 w-1/3 
       bg-gradient-to-r from-black/50 via-black/20 to-transparent"
                   />
-                </div>
+                </div> 
               </div>
             </SwiperSlide>
           ))}
@@ -72,7 +72,7 @@ export default function HeroImmersive({
             {title || "JDA - RERA Approved Plots"}
           </h1>
 
-          <p className="mt-3 text-gray-200 max-w-xl">
+          <p className="mt-3 text-xl text-gray-200 max-w-xl">
             {subtitle ||
               "Plots, Villas, and Farmhouse at Jaipur's fastest growing locations"}
           </p>
