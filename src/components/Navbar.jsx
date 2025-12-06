@@ -103,17 +103,17 @@ export default function Navbar() {
             <a href="/" className="block py-2">
               Home
             </a>
-            <a href="#projects" className="block py-2">
+            <a href="/about-us" className="block py-2">
               About Us
             </a>
             <a href="/properties" className="block py-2">
               Properties
             </a>
 
-            <a href="#media" className="block py-2">
+            <a href="/gallery" className="block py-2">
               Our Gallery
             </a>
-            <a href="#contact" className="block py-2">
+            <a href="/contact-us" className="block py-2">
               Contact Us
             </a>
           </div>
